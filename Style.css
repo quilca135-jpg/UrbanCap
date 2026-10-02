@@ -1,0 +1,2044 @@
+/* =========================================================
+   URBANCAP
+   GORRAS Y CORREAS
+   CSS COMPLETO ADAPTADO
+========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #ffffff;
+    color: #171717;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================================================
+   2. HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+
+    color: #171717;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+
+/* =========================================================
+   3. MENÚ PRINCIPAL
+========================================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.menu > a,
+.menu-item > a {
+    display: block;
+
+    color: #444444;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.menu > a:hover,
+.menu-item > a:hover {
+    color: #e63946;
+}
+
+
+/* ELEMENTO CON SUBMENÚ */
+
+.menu-item {
+    position: relative;
+}
+
+
+/* =========================================================
+   4. MENÚ DESPLEGABLE
+========================================================= */
+
+.dropdown {
+    position: absolute;
+
+    top: 34px;
+    left: 50%;
+
+    width: 230px;
+
+    padding: 9px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.13);
+
+    transform:
+        translateX(-50%)
+        translateY(12px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 2000;
+}
+
+
+/* Mostrar dropdown */
+
+.menu-item:hover .dropdown {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* Opciones */
+
+.dropdown a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 13px;
+
+    color: #444444;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    border-radius: 6px;
+
+    transition: 0.2s ease;
+}
+
+.dropdown a:hover {
+    background: #fff0f2;
+
+    color: #e63946;
+
+    padding-left: 18px;
+}
+
+
+/* TÍTULO DE MARCAS */
+
+.dropdown .titulo-menu {
+    display: block;
+
+    padding: 8px 12px 6px;
+
+    color: #e63946;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #eeeeee;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   5. BOTÓN HEADER
+========================================================= */
+
+.btn-header {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.btn-header:hover {
+    background: #e63946;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   6. HERO
+========================================================= */
+
+.hero {
+    min-height: 590px;
+
+    padding: 70px 9%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background: #fafafa;
+
+    overflow: hidden;
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+    max-width: 550px;
+}
+
+
+/* ETIQUETA */
+
+.hero-label {
+    display: inline-block;
+
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    margin: 18px 0;
+
+    font-size: 64px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    color: #171717;
+}
+
+.hero h1 strong {
+    display: block;
+
+    color: #e63946;
+}
+
+
+/* DESCRIPCIÓN */
+
+.hero-content > p {
+    max-width: 470px;
+
+    margin-bottom: 30px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   7. BOTONES HERO
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 21px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #e63946;
+
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #c92f3b;
+
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #dddddd;
+
+    color: #333333;
+
+    background: #ffffff;
+}
+
+.btn-secondary:hover {
+    border-color: #171717;
+
+    background: #171717;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   8. BENEFICIOS
+========================================================= */
+
+.beneficios {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 27px;
+}
+
+.beneficios span {
+    color: #555555;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   9. IMAGEN HERO + CÍRCULO PARA LOGO
+========================================================= */
+
+.hero-image {
+    height: 450px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* CÍRCULO */
+
+.hero-circle {
+    width: 390px;
+    height: 390px;
+
+    position: absolute;
+
+    background: #ffe1e5;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 20px 50px rgba(230, 57, 70, 0.12);
+}
+
+
+/*
+   La imagen queda dentro del círculo.
+   Sirve para colocar lologo.jpg.
+*/
+
+.hero-image img {
+    width: 330px;
+    height: 330px;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 2;
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(
+            0 20px 25px
+            rgba(0, 0, 0, 0.16)
+        );
+
+    transition: 0.4s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   10. CATEGORÍAS
+========================================================= */
+
+.categorias {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    padding: 25px 9%;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+}
+
+.categoria {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.categoria:hover {
+    background: #fafafa;
+
+    transform: translateY(-3px);
+}
+
+.categoria-icono {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #f4f4f4;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+}
+
+.categoria h3 {
+    margin-bottom: 3px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.categoria p {
+    color: #888888;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   11. PRODUCTOS
+========================================================= */
+
+.productos {
+    padding: 95px 9%;
+
+    background: #ffffff;
+}
+
+
+/* TÍTULO */
+
+.section-title {
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+.section-title > span {
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+}
+
+.section-title h2 {
+    margin: 8px 0;
+
+    font-size: 37px;
+
+    line-height: 1.2;
+}
+
+.section-title p {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   12. GRID PRODUCTOS
+========================================================= */
+
+.productos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 23px;
+}
+
+
+/* TARJETA */
+
+.producto {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e7e7e7;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+
+    border-color: #dddddd;
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   13. IMAGEN PRODUCTO
+========================================================= */
+
+.producto-img {
+    height: 270px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background: #f6f6f6;
+
+    overflow: hidden;
+}
+
+.producto-img img {
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+
+    transition: 0.4s ease;
+}
+
+.producto:hover .producto-img img {
+    transform: scale(1.07);
+}
+
+
+/* =========================================================
+   14. ETIQUETAS
+========================================================= */
+
+.etiqueta {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    padding: 6px 9px;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    border-radius: 4px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    z-index: 3;
+}
+
+.etiqueta.nuevo {
+    background: #e63946;
+}
+
+
+/* =========================================================
+   15. FAVORITOS
+========================================================= */
+
+.favorito {
+    width: 34px;
+    height: 34px;
+
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    color: #333333;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s ease;
+
+    z-index: 3;
+}
+
+.favorito:hover {
+    color: #e63946;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   16. INFORMACIÓN PRODUCTO
+========================================================= */
+
+.producto-info {
+    padding: 19px;
+}
+
+.producto-info small {
+    color: #e63946;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+.producto-info h3 {
+    margin: 6px 0;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.producto-info p {
+    min-height: 42px;
+
+    color: #777777;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   17. PRECIO + COMPRAR
+========================================================= */
+
+.producto-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 16px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.producto-bottom strong {
+    color: #171717;
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+.btn-comprar {
+    padding: 9px 14px;
+
+    border: none;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: #e63946;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   18. SECCIÓN DE MARCAS
+========================================================= */
+
+.marcas {
+    padding: 90px 9%;
+
+    background: #f8f8f8;
+}
+
+.marcas-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.marcas-header span {
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.marcas-header h2 {
+    margin: 10px 0;
+
+    font-size: 37px;
+}
+
+.marcas-header p {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+/* GRID DE MARCAS */
+
+.marcas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* TARJETA MARCA */
+
+.marca-card {
+    display: block;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e6e6;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.marca-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.09);
+
+    border-color: #e63946;
+}
+
+
+/* IMAGEN MARCA */
+
+.marca-card img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.marca-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* INFO MARCA */
+
+.marca-info {
+    padding: 17px;
+
+    text-align: center;
+}
+
+.marca-info h3 {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+}
+
+.marca-info p {
+    color: #888888;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   19. MODELOS DESTACADOS
+========================================================= */
+
+.destacados {
+    padding: 90px 9%;
+
+    background: #ffffff;
+}
+
+.destacados-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.destacados-header span {
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.destacados-header h2 {
+    margin-top: 8px;
+
+    font-size: 36px;
+}
+
+.destacados-header p {
+    max-width: 390px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* GRID */
+
+.destacados-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 17px;
+}
+
+
+/* TARJETA */
+
+.destacado-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e6e6;
+
+    border-radius: 9px;
+
+    transition: 0.3s ease;
+}
+
+.destacado-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* IMAGEN */
+
+.destacado-img {
+    height: 210px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    overflow: hidden;
+}
+
+.destacado-img img {
+    width: 90%;
+
+    height: 90%;
+
+    object-fit: contain;
+
+    transition: 0.4s ease;
+}
+
+.destacado-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* INFO */
+
+.destacado-info {
+    padding: 15px;
+}
+
+.destacado-info small {
+    color: #e63946;
+
+    font-size: 7px;
+
+    font-weight: 800;
+}
+
+.destacado-info h3 {
+    margin: 5px 0;
+
+    font-size: 12px;
+}
+
+.destacado-info strong {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   20. OFERTA
+========================================================= */
+
+.oferta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 65px 9%;
+
+    background: #171717;
+
+    color: #ffffff;
+}
+
+.oferta span {
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.oferta h2 {
+    max-width: 650px;
+
+    margin: 9px 0;
+
+    font-size: 35px;
+
+    line-height: 1.15;
+}
+
+.oferta p {
+    color: #aaaaaa;
+
+    font-size: 11px;
+}
+
+.oferta a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 21px;
+
+    background: #ffffff;
+
+    color: #171717;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.oferta a:hover {
+    background: #e63946;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   21. NOSOTROS
+========================================================= */
+
+.nosotros {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 100px 9%;
+
+    background: #f8f8f8;
+}
+
+.nosotros-image img {
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.nosotros-content > span {
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+}
+
+.nosotros-content h2 {
+    margin: 15px 0;
+
+    font-size: 39px;
+
+    line-height: 1.1;
+}
+
+.nosotros-content h2 strong {
+    color: #e63946;
+}
+
+.nosotros-content > p {
+    margin-bottom: 12px;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+
+/* CHECKS */
+
+.checks {
+    margin: 25px 0;
+}
+
+.checks p {
+    margin: 9px 0;
+
+    color: #444444;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   22. CONTACTO
+========================================================= */
+
+.contacto {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    padding: 95px 9%;
+
+    background: #ffffff;
+}
+
+.contacto-info > span {
+    color: #e63946;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+}
+
+.contacto-info h2 {
+    max-width: 450px;
+
+    margin: 15px 0;
+
+    font-size: 40px;
+
+    line-height: 1.1;
+}
+
+.contacto-info > p {
+    max-width: 440px;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* DATOS */
+
+.datos {
+    margin-top: 28px;
+}
+
+.datos div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin: 15px 0;
+}
+
+.datos div > span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #f5f5f5;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.datos p {
+    color: #555555;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   23. FORMULARIO
+========================================================= */
+
+.formulario {
+    padding: 32px;
+
+    background: #f7f7f7;
+
+    border-radius: 10px;
+}
+
+.formulario label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #333333;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 10px;
+
+    transition: 0.2s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #e63946;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(230, 57, 70, 0.08);
+}
+
+.formulario textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.formulario button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #e63946;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.formulario button:hover {
+    background: #c92f3b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   24. FOOTER
+========================================================= */
+
+footer {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding: 65px 9%;
+}
+
+.footer-brand p {
+    max-width: 290px;
+
+    margin-top: 13px;
+
+    color: #888888;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+}
+
+.footer-column a {
+    display: block;
+
+    margin: 9px 0;
+
+    color: #888888;
+
+    font-size: 9px;
+
+    transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    padding-left: 3px;
+}
+
+.copyright {
+    padding: 19px 9%;
+
+    border-top: 1px solid #292929;
+
+    color: #666666;
+
+    text-align: center;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   25. TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .productos,
+    .marcas,
+    .destacados {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .productos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .marcas-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .destacados-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .nosotros {
+        padding: 80px 6%;
+    }
+
+    .contacto {
+        padding: 80px 6%;
+    }
+
+    .footer-content {
+        padding: 55px 6%;
+    }
+}
+
+
+/* =========================================================
+   26. TABLET PEQUEÑA
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        min-height: 70px;
+
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 60px 7%;
+    }
+
+    .hero-content {
+        max-width: 600px;
+
+        margin: auto;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .beneficios {
+        justify-content: center;
+    }
+
+    .hero-image {
+        height: 360px;
+    }
+
+    .hero-circle {
+        width: 310px;
+        height: 310px;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .categorias {
+        padding: 20px 6%;
+    }
+
+    .nosotros {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .nosotros-image {
+        max-width: 650px;
+
+        margin: auto;
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-content {
+        grid-template-columns:
+            2fr 1fr 1fr;
+    }
+
+    .destacados-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .destacados-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   27. CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .menu {
+        justify-content: flex-start;
+
+        gap: 18px;
+    }
+
+    .menu > a,
+    .menu-item > a {
+        white-space: nowrap;
+
+        font-size: 10px;
+    }
+
+
+    /* DROPDOWN */
+
+    .dropdown {
+        position: fixed;
+
+        top: 105px;
+
+        left: 18px;
+
+        width: 230px;
+
+        transform:
+            translateY(12px);
+
+        max-height: 400px;
+
+        overflow-y: auto;
+    }
+
+    .menu-item:hover .dropdown {
+        transform:
+            translateY(0);
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-content > p {
+        font-size: 11px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .beneficios {
+        flex-direction: column;
+
+        gap: 9px;
+    }
+
+    .hero-image {
+        height: 300px;
+
+        margin-top: 20px;
+    }
+
+    .hero-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .categorias {
+        grid-template-columns: 1fr;
+
+        padding: 20px 7%;
+    }
+
+
+    /* PRODUCTOS */
+
+    .productos {
+        padding: 70px 7%;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* MARCAS */
+
+    .marcas {
+        padding: 70px 7%;
+    }
+
+    .marcas-header h2 {
+        font-size: 29px;
+    }
+
+    .marcas-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .marca-card img {
+        height: 140px;
+    }
+
+
+    /* DESTACADOS */
+
+    .destacados {
+        padding: 70px 7%;
+    }
+
+    .destacados-header h2 {
+        font-size: 29px;
+    }
+
+    .destacados-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .destacado-img {
+        height: 180px;
+    }
+
+
+    /* OFERTA */
+
+    .oferta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 50px 7%;
+    }
+
+    .oferta h2 {
+        font-size: 29px;
+    }
+
+
+    /* NOSOTROS */
+
+    .nosotros {
+        padding: 70px 7%;
+    }
+
+    .nosotros-image img {
+        height: 320px;
+    }
+
+    .nosotros-content h2 {
+        font-size: 32px;
+    }
+
+
+    /* CONTACTO */
+
+    .contacto {
+        padding: 70px 7%;
+    }
+
+    .contacto-info h2 {
+        font-size: 34px;
+    }
+
+    .formulario {
+        padding: 23px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 35px;
+
+        padding: 50px 7%;
+    }
+}
+
+
+/* =========================================================
+   28. CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        height: 270px;
+    }
+
+    .hero-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero-image img {
+        width: 195px;
+        height: 195px;
+    }
+
+    .categoria {
+        padding: 14px;
+    }
+
+    .producto-img {
+        height: 240px;
+    }
+
+    .producto-info {
+        padding: 16px;
+    }
+
+    .marcas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marca-card img {
+        height: 180px;
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destacado-img {
+        height: 230px;
+    }
+
+    .oferta h2 {
+        font-size: 25px;
+    }
+
+    .nosotros-content h2 {
+        font-size: 29px;
+    }
+
+    .contacto-info h2 {
+        font-size: 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   29. ANIMACIONES
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.hero-content {
+    animation:
+        aparecer 0.8s ease;
+}
+
+.hero-image {
+    animation:
+        aparecer 0.9s ease;
+}
+
+
+/* =========================================================
+   30. SELECCIÓN DE TEXTO
+========================================================= */
+
+::selection {
+    background: #e63946;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   31. BARRA DE SCROLL
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e63946;
+}
